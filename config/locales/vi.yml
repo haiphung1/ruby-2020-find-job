@@ -1,0 +1,7 @@
+vi:
+  admin:
+    manage: "Quản lý"
+    home: "Trang chủ"
+    dashboard: "Bảng điều khiển"
+    user: "Người dùng"
+    manage_job: "Quản lí công việc"
