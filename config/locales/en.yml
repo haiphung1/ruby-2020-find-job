@@ -5,3 +5,14 @@ en:
     dashboard: "Dashboard"
     user: "User"
     manage_job: "Manage Job"
+  static_pages:
+    home: 
+      title: "Home"
+    about:
+      title: "About"
+  user:
+    login: "Login"
+    logout: "Logout"
+    register: "Register"
+  footer:
+    coppy_right: "Copyright © %{year} Job Finder - All Rights Reserved."

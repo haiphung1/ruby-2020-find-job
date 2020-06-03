@@ -5,3 +5,14 @@ vi:
     dashboard: "Bảng điều khiển"
     user: "Người dùng"
     manage_job: "Quản lí công việc"
+  static_pages:
+    home: 
+      title: "Trang chủ"
+    about:
+      title: "Về chúng tôi"
+  user:
+    login: "Đăng nhập"
+    logout: "Đăng xuất"
+    register: "Đăng ký"
+  footer:
+    coppy_right: "Tìm việc làm %{year}"
