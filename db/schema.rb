@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_04_011744) do
+ActiveRecord::Schema.define(version: 2020_06_05_021256) do
 
   create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 2020_06_04_011744) do
   end
 
   create_table "notifications", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "target_type"
+    t.string "type"
     t.integer "creator_id"
     t.integer "receiver_id"
     t.string "data"
@@ -70,6 +70,7 @@ ActiveRecord::Schema.define(version: 2020_06_04_011744) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["category_id"], name: "index_posts_on_category_id"
     t.index ["skill_id"], name: "index_posts_on_skill_id"
+    t.index ["user_id", "created_at"], name: "index_posts_on_user_id_and_created_at"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
