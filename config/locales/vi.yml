@@ -16,3 +16,8 @@ vi:
     register: "Đăng ký"
   footer:
     coppy_right: "Tìm việc làm %{year}"
+  auth:
+    email: "Email"
+    password: "Mật khẩu"
+    incorrect: "Email hoặc mật khẩu không đúng"
+    success: "Đăng nhập thành công"

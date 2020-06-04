@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_02_032108) do
+ActiveRecord::Schema.define(version: 2020_06_04_011744) do
 
   create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 2020_06_02_032108) do
   end
 
   create_table "notifications", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "type"
+    t.string "target_type"
     t.integer "creator_id"
     t.integer "receiver_id"
     t.string "data"
@@ -63,7 +63,7 @@ ActiveRecord::Schema.define(version: 2020_06_02_032108) do
     t.string "description"
     t.integer "salary"
     t.string "address"
-    t.integer "type"
+    t.integer "target_type"
     t.date "start_date"
     t.date "end_date"
     t.datetime "created_at", precision: 6, null: false
@@ -114,6 +114,7 @@ ActiveRecord::Schema.define(version: 2020_06_02_032108) do
     t.string "provider"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "role"
   end
 
   create_table "views", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

@@ -7,8 +7,8 @@
     <div class="user-panel mt-3 pb-3 mb-3 d-flex">
       <div class="info">
         <%= link_to "/admin" do %>
-          <%= image_tag("user.jpg", class: "img-circle elevation-2") %>
-          <%= t "admin.user" %>
+          <%= image_tag(current_user.avatar, class: "img-circle elevation-2") %>
+          <%= current_user.username %>
         <% end %>
       </div>
     </div>
@@ -16,8 +16,12 @@
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
         <li class="nav-item">
           <%= link_to "#", class: "nav-link" do %>
+            <i class="fab fa-github"></i>
             <p><%= t "admin.dashboard" %></p>
           <% end %>
+        </li>
+        <li class="nav-item">
+          <%= link_to t("user.logout"), logout_path, method: :delete, class: "nav-link" %>
         </li>
       </ul>
     </nav>

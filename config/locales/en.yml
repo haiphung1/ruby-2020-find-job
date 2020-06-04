@@ -16,3 +16,8 @@ en:
     register: "Register"
   footer:
     coppy_right: "Copyright © %{year} Job Finder - All Rights Reserved."
+  auth:
+    email: "Email"
+    password: "Password"
+    incorrect: "Email or password is incorrect"
+    success: "Login success"
