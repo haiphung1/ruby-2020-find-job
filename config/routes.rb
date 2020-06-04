@@ -6,9 +6,9 @@ Rails.application.routes.draw do
     post "/login", to: "sessions#create"
     delete "/logout", to: "sessions#destroy"
 
-    resources :user do
+    resources :users do
       member do
-        resources :profile, only: %i(new create)
+        resources :profiles, except: :index
       end
     end
 
