@@ -21,3 +21,5 @@ vi:
     password: "Mật khẩu"
     incorrect: "Email hoặc mật khẩu không đúng"
     success: "Đăng nhập thành công"
+  apply: "Ứng tuyển ngay"
+  list_all_job_html: "Tất cả <span>Công việc</span>"

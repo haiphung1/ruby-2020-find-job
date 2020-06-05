@@ -21,3 +21,5 @@ en:
     password: "Password"
     incorrect: "Email or password is incorrect"
     success: "Login success"
+  apply: "Apply Now"
+  list_all_job_html: "All <span>Jobs</span>"
