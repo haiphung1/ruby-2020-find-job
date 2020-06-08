@@ -5,6 +5,21 @@ en:
     dashboard: "Dashboard"
     user: "User"
     manage_job: "Manage Job"
+    post:
+      post: "Post"
+      post_job: "Post job"
+      category: "Category"
+      address: "Address"
+      start_date: "Start date"
+      end_date: "End date"
+      salary: "Salary"
+      title: "Title"
+      description: "Description"
+      target_type: "Target type"
+      skill: "Skill"
+      Submit: "Submit"
+      part_time: "Part time"
+      full_time: "Full time"
   static_pages:
     home: 
       title: "Home"
@@ -23,3 +38,9 @@ en:
     success: "Login success"
   apply: "Apply Now"
   list_all_job_html: "All <span>Jobs</span>"
+  error:
+    error: "Error"
+    the_form_contains: "The form contains"
+  notification:
+    post_success: "Post success!"
+    post_fail: "Post failed!"
