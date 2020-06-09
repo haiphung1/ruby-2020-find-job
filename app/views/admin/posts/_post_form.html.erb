@@ -1,0 +1,95 @@
+<%= form_for [:admin, @post], url: admin_posts_path do |f| %>
+  <%= render "shared/error_messages", object: f.object %>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <%= f.label :category do %>
+          <%= t "admin.post.category" %> <span class="text-danger">*</span>
+        <% end %><br>
+        <%= f.select("category_id", get_category) %>
+      </div>
+      <div class="form-group">
+        <%= f.label :address do %>
+          <%= t "admin.post.address" %> <span class="text-danger">*</span>
+        <% end %>
+        <%= f.text_field :address, class: "form-control" %>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="form-group">
+            <%= f.label :start_date do %>
+              <%= t "admin.post.start_date" %> <span class="text-danger">*</span>
+            <% end %>
+            <%= f.date_field :start_date, class: "form-control" %>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <%= f.label :end_date do %>
+              <%= t "admin.post.end_date" %> <span class="text-danger">*</span>
+            <% end %>
+            <%= f.date_field :end_date, class: "form-control" %>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <%= f.label :salary do %>
+              <%= t "admin.post.salary" %> <span class="text-danger">*</span>
+            <% end %>
+            <%= f.number_field :salary, class: "form-control" %>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <%= f.label :target_type do %>
+              <%= t "admin.post.target_type" %> <span class="text-danger">*</span>
+            <% end %>
+            <div class="check">
+              <%= f.radio_button :target_type, "parttime" %>
+              <%= f.label :target_type, t("admin.post.part_time") %>
+            </div>
+            <div class="check">
+              <%= f.radio_button :target_type, "fulltime" %>
+              <%= f.label :target_type, t("admin.post.full_time") %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+        <%= f.label :title do %>
+          <%= t "admin.post.title" %> <span class="text-danger">*</span>
+        <% end %>
+        <%= f.text_field :title, class: "form-control" %>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <div class="form-group">
+        <%= f.label :description do %>
+          <%= t "admin.post.description" %> <span class="text-danger">*</span>
+        <% end %>
+        <%= f.text_area :description, class: "form-control", rows: Settings.rows %>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <div class="form-group">
+        <%= f.fields_for :skills do |ff| %>
+          <%= ff.label :skill do %>
+            <%= t "admin.post.skill" %> <span class="text-danger">*</span>
+          <% end %>
+          <%= ff.text_field :title, class: "form-control" %>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <div class="form-group text-center">
+        <%= f.submit t("admin.post.post_job"), class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+<% end %>

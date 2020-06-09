@@ -4,3 +4,15 @@ role:
   admin: 2
 job_per_page: 10
 image_link: "https://loremflickr.com/g/300/300/logo,company/all"
+validation:
+  title_min: 10
+  title_max: 255
+  description_min: 10
+  description_max: 255
+  salary_min: 5
+  address_min: 5
+  address_max: 255
+type:
+  part_time: 1
+  full_time: 2
+rows: 10

@@ -5,6 +5,20 @@ vi:
     dashboard: "Bảng điều khiển"
     user: "Người dùng"
     manage_job: "Quản lí công việc"
+    post:
+      post: "Đăng bài"
+      post_job: "Đăng công việc"
+      category: "Danh mục"
+      address: "Địa chỉ"
+      start_date: "Ngày nộp CV"
+      end_date: "Ngày hết hạn"
+      salary: "Lương"
+      title: "Tiêu đề"
+      description: "Mô tả"
+      target_type: "Hình thức"
+      skill: "Kỹ năng"
+      part_time: "Bán thời gian"
+      full_time: "Toàn thời gian"
   static_pages:
     home: 
       title: "Trang chủ"
@@ -23,3 +37,28 @@ vi:
     success: "Đăng nhập thành công"
   apply: "Ứng tuyển ngay"
   list_all_job_html: "Tất cả <span>Công việc</span>"
+  error:
+    error: "Lỗi"
+    the_form_contains: "Lỗi nhập liệu"
+  activerecord:
+    errors:
+      models:
+        post:
+          attributes:
+            title:
+              blank: "Tiêu đề không thể để trống"
+            description:
+              blank: "Mô tả không thể để trống"
+            salary:
+              blank: "Lương không được để trống"
+            address:
+              blank: "Địa chỉ không được để trống"
+            target_date:
+              blank: "Kiều không được để trống"
+            start_date:
+              blank: "Ngày đăng không được"
+            end_date:
+              blank: "Ngày hết hạn không được để trống"
+  notification:
+    post_success: "Tạo công việc thành công!"
+    post_fail: "Tạo công việc thất bại!"

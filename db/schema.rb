@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_05_021256) do
+ActiveRecord::Schema.define(version: 2020_06_08_032930) do
 
   create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
@@ -58,7 +58,6 @@ ActiveRecord::Schema.define(version: 2020_06_05_021256) do
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "category_id", null: false
-    t.bigint "skill_id", null: false
     t.string "title"
     t.string "description"
     t.integer "salary"
@@ -69,14 +68,12 @@ ActiveRecord::Schema.define(version: 2020_06_05_021256) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["category_id"], name: "index_posts_on_category_id"
-    t.index ["skill_id"], name: "index_posts_on_skill_id"
     t.index ["user_id", "created_at"], name: "index_posts_on_user_id_and_created_at"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
   create_table "profiles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.bigint "skill_id", null: false
     t.string "avatar"
     t.integer "phone"
     t.string "email"
@@ -87,7 +84,6 @@ ActiveRecord::Schema.define(version: 2020_06_05_021256) do
     t.integer "status"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["skill_id"], name: "index_profiles_on_skill_id"
     t.index ["user_id"], name: "index_profiles_on_user_id"
   end
 
@@ -95,6 +91,8 @@ ActiveRecord::Schema.define(version: 2020_06_05_021256) do
     t.string "title"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "skillable_type"
+    t.integer "skillable_id"
   end
 
   create_table "user_applies", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -131,9 +129,7 @@ ActiveRecord::Schema.define(version: 2020_06_05_021256) do
   add_foreign_key "experiences", "profiles"
   add_foreign_key "experiences", "users"
   add_foreign_key "posts", "categories"
-  add_foreign_key "posts", "skills"
   add_foreign_key "posts", "users"
-  add_foreign_key "profiles", "skills"
   add_foreign_key "profiles", "users"
   add_foreign_key "user_applies", "posts"
   add_foreign_key "user_applies", "users"
