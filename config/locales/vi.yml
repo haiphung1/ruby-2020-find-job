@@ -5,6 +5,7 @@ vi:
     dashboard: "Bảng điều khiển"
     user: "Người dùng"
     manage_job: "Quản lí công việc"
+    action: "Hành động"
     post:
       post: "Đăng bài"
       post_job: "Đăng công việc"
@@ -19,6 +20,11 @@ vi:
       skill: "Kỹ năng"
       part_time: "Bán thời gian"
       full_time: "Toàn thời gian"
+      list_all_job: "Hiển thị danh sách công việc"
+      delete: "Xóa"
+      delete_success: "Xóa bài viết thành công!"
+      delete_fail: "Xóa bài viết thất bại!"
+      not_found: "Không tìm thấy bài viết"
   static_pages:
     home: 
       title: "Trang chủ"

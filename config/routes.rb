@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     namespace :admin do
       root to: "admins#index"
 
-      resources :posts, only: [:index, :new, :create]
+      resources :posts, except: %i(edit update)
     end
   end
 end

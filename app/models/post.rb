@@ -3,6 +3,8 @@ class Post < ApplicationRecord
   belongs_to :user
   has_many :skills, as: :skillable, dependent: :destroy
 
+  delegate :title, to: :category, prefix: true
+
   accepts_nested_attributes_for :skills, allow_destroy: true
 
   scope :by_created_at, ->{order created_at: :desc}

@@ -1,0 +1,11 @@
+<tr>
+  <td><%= post_counter + Settings.index %></td>
+  <td><%= post.category_title %></td>
+  <td><%= post.title %></td>
+  <td><%= post.salary %></td>
+  <td><%= post.start_date %></td>
+  <td><%= post.end_date %></td>
+  <td>
+    <%= link_to t("admin.post.delete"), [:admin, post], method: :delete, class: "btn btn-danger btn-sm" %>
+  </td>
+</tr>
