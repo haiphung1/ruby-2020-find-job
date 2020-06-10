@@ -1,0 +1,18 @@
+<tr>
+  <td><%= user_apply_counter + Settings.index %></td>
+  <td><%= user_apply.post_title %></td>
+  <td><%= user_apply.post.start_date %></td>
+  <td><%= user_apply.post.end_date %></td>
+  <td><%= user_apply.user_username %></td>
+  <td>
+    <span class="badge badge-<%= get_span_class user_apply %>">
+      <%= user_apply.status %>
+    </span>
+  </td>
+  <td>
+    <%= link_to t("admin.view_cv"), admin_user_path(user_apply), class: "btn btn-info btn-sm" %>
+    <% if user_apply.pending? %>
+      <%= link_to t("admin.confirm"), [:admin, user_apply], method: :patch, class: "btn btn-primary btn-sm" %>
+    <% end %>
+  </td>
+</tr>

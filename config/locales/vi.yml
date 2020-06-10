@@ -42,6 +42,17 @@ vi:
       cancel: "Trở lại"
       user_not_found: "Không tìm thấy người dùng!"
       profile_not_found: "Không tìm thấy CV!"
+    apply:
+      apply_job: "Ứng tuyển công việc"
+      list_candidate: "Danh sách ứng viên"
+      candidate: "Ứng viên"
+      status: "Trạng thái"
+      action: "Hành động"
+      post_title: "Bài viết"
+      approved_success: "Phê duyệt thành công!"
+      approved_fail: "Phê duyệt thất bại!"
+    view_cv: "Xem CV"
+    confirm: "Xác nhận"
   static_pages:
     home: 
       title: "Trang chủ"
