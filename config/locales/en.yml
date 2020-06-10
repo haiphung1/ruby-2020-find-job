@@ -5,6 +5,7 @@ en:
     dashboard: "Dashboard"
     user: "User"
     manage_job: "Manage Job"
+    action: "Action"
     post:
       post: "Post"
       post_job: "Post job"
@@ -20,6 +21,11 @@ en:
       Submit: "Submit"
       part_time: "Part time"
       full_time: "Full time"
+      list_all_job: "List all job"
+      delete: "Delete"
+      delete_success: "Delete post success!"
+      delete_fail: "Delete post fail!"
+      not_found: "Not found"
   static_pages:
     home: 
       title: "Home"

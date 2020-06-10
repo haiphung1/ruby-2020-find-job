@@ -6,4 +6,10 @@ class ApplicationController < ActionController::Base
 
     redirect_to login_url
   end
+
+  private
+
+  def default_url_options
+    {locale: I18n.locale}
+  end
 end
