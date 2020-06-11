@@ -1,0 +1,9 @@
+<%= provide :title, t("admin.profile.show_profile") %>
+<h3><%= t "admin.profile.show_profile" %></h3>
+<div class="card card-solid">
+  <div class="card-body pb-0">
+    <div class="row d-flex align-items-stretch">
+      <%= render partial: "profile", collection: @profiles %>
+    </div>
+  </div>
+</div>
