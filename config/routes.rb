@@ -10,6 +10,8 @@ Rails.application.routes.draw do
       root to: "admins#index"
 
       resources :posts, except: %i(show)
+      resources :users, only: %i(show)
+      resources :profiles, only: %i(show)
     end
   end
 end

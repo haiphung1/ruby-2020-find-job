@@ -29,6 +29,19 @@ vi:
       edit_post: "Chỉnh sửa công việc"
       update_success: "Cập nhập công việc thành công!"
       update_fail: "Cập nhập công việc thất bại!"
+    profile:
+      show_profile: "Xem CV"
+      phone: "Điện thoại"
+      detail: "Chi tiết CV"
+      email: "Email"
+      facebook: "Facebook"
+      about_me: "Thông tin"
+      education: "Học tập"
+      process: "Quá trình"
+      experience: "Kinh nghiệm"
+      cancel: "Trở lại"
+      user_not_found: "Không tìm thấy người dùng!"
+      profile_not_found: "Không tìm thấy CV!"
   static_pages:
     home: 
       title: "Trang chủ"

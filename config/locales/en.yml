@@ -30,6 +30,19 @@ en:
       edit_post: "Edit post"
       update_success: "Update job success!"
       update_fail: "Update job fail!"
+    profile:
+      show_profile: "Show profile"
+      phone: "Phone"
+      detail: "Detail CV"
+      email: "Email"
+      facebook: "Facebook"
+      about_me: "About me"
+      education: "Education"
+      process: "Process"
+      experience: "Experience"
+      cancel: "Cancel"
+      user_not_found: "User not found!"
+      profile_not_found: "Profile not found!"
   static_pages:
     home: 
       title: "Home"
