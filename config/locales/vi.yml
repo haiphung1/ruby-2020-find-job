@@ -25,6 +25,10 @@ vi:
       delete_success: "Xóa bài viết thành công!"
       delete_fail: "Xóa bài viết thất bại!"
       not_found: "Không tìm thấy bài viết"
+      edit: "Sửa"
+      edit_post: "Chỉnh sửa công việc"
+      update_success: "Cập nhập công việc thành công!"
+      update_fail: "Cập nhập công việc thất bại!"
   static_pages:
     home: 
       title: "Trang chủ"

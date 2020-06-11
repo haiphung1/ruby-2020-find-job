@@ -26,6 +26,10 @@ en:
       delete_success: "Delete post success!"
       delete_fail: "Delete post fail!"
       not_found: "Not found"
+      edit: "Edit"
+      edit_post: "Edit post"
+      update_success: "Update job success!"
+      update_fail: "Update job fail!"
   static_pages:
     home: 
       title: "Home"

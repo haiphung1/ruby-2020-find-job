@@ -1,5 +1,5 @@
 class Admin::PostsController < Admin::AdminsController
-  before_action :load_post, only: :destroy
+  before_action :load_post, only: %i(edit update destroy)
 
   def index
     @posts = current_user.posts
@@ -18,6 +18,20 @@ class Admin::PostsController < Admin::AdminsController
     else
       flash[:danger] = t "notification.post_fail"
       render :new
+    end
+  end
+
+  def edit
+    @post.skills.build
+  end
+
+  def update
+    if @post.update_attributes post_params
+      flash[:success] = t "admin.post.update_success"
+      redirect_to admin_posts_path
+    else
+      flash[:danger] = t "admin.post.update_fail"
+      redirect_to edit_admin_post_path @post
     end
   end
 
