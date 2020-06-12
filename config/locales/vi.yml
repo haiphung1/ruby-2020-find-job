@@ -62,6 +62,7 @@ vi:
     login: "Đăng nhập"
     logout: "Đăng xuất"
     register: "Đăng ký"
+    create_profile: "Tạo cv"
   footer:
     coppy_right: "Tìm việc làm %{year}"
   auth:
@@ -96,3 +97,24 @@ vi:
   notification:
     post_success: "Tạo công việc thành công!"
     post_fail: "Tạo công việc thất bại!"
+    create_success: "Tạo CV thành công"
+    create_fail: "Tạo CV thất bại"
+  date:
+    order:
+      - :day
+      - :month
+      - :year
+  signup: "Tạo CV"
+  cv:
+    education: "Học vấn"
+    qualification: "Trình độ chuyên môn"
+    skill: "Kỹ năng"
+    change_avatar: "thay đổi ảnh"
+    add: " thêm"
+    title: "Tiêu đề"
+    place: "Địa chỉ"
+    position: "Vị trí"
+    email: "Email"
+    phone: "Số điện thoại"
+    remove: "Xóa"
+    point: "Điểm"
