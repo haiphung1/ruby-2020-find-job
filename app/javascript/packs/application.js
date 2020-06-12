@@ -11,6 +11,8 @@ require("packs/datatable.js")
 require("datatables.net-bs4")
 
 import "@fortawesome/fontawesome-free/js/all";
+import $ from 'jquery';
+global.$ = jQuery;
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag "rails.png" %>)

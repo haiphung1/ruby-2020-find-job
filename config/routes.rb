@@ -12,6 +12,7 @@ Rails.application.routes.draw do
       resources :posts, except: %i(show)
       resources :users, only: %i(show)
       resources :profiles, only: %i(show)
+      resources :user_applies, only: %i(index update)
     end
   end
 end
