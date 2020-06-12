@@ -43,6 +43,17 @@ en:
       cancel: "Cancel"
       user_not_found: "User not found!"
       profile_not_found: "Profile not found!"
+    apply:
+      apply_job: "Apply Job"
+      list_candidate: "Candidate list"
+      candidate: "Candidate"
+      status: "Status"
+      action: "Action"
+      post_title: "Post title"
+      approved_success: "Approved success!"
+      approved_fail: "Approved fail!"
+    view_cv: "View CV"
+    confirm: "Confirm"
   static_pages:
     home: 
       title: "Home"
@@ -52,6 +63,7 @@ en:
     login: "Login"
     logout: "Logout"
     register: "Register"
+    create_profile: "Create profile"
   footer:
     coppy_right: "Copyright © %{year} Job Finder - All Rights Reserved."
   auth:
@@ -67,3 +79,23 @@ en:
   notification:
     post_success: "Post success!"
     post_fail: "Post failed!"
+  date:
+    order:
+      - :day
+      - :month
+      - :year
+  signup: "Tạo CV"
+  cv: 
+    education: "Education"
+    qualification: "Qualification"
+    experience: "Experience"
+    skills: "Skills"
+    change_avatar: "Change avatar"
+    add: " Add"
+    title: "Title"
+    place: "Place"
+    position: "Position"
+    email: "Email"
+    phone: "Phone"
+    remove: "Xóa"
+    point: "Điểm"

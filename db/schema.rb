@@ -10,7 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_08_032930) do
+ActiveRecord::Schema.define(version: 2020_06_10_062613) do
+
+  create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "record_type", null: false
+    t.bigint "record_id", null: false
+    t.bigint "blob_id", null: false
+    t.datetime "created_at", null: false
+    t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
+    t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
+  end
+
+  create_table "active_storage_blobs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "key", null: false
+    t.string "filename", null: false
+    t.string "content_type"
+    t.text "metadata"
+    t.bigint "byte_size", null: false
+    t.string "checksum", null: false
+    t.datetime "created_at", null: false
+    t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
 
   create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
@@ -35,14 +56,12 @@ ActiveRecord::Schema.define(version: 2020_06_08_032930) do
   end
 
   create_table "experiences", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "user_id", null: false
     t.bigint "profile_id", null: false
     t.string "title"
     t.string "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["profile_id"], name: "index_experiences_on_profile_id"
-    t.index ["user_id"], name: "index_experiences_on_user_id"
   end
 
   create_table "notifications", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -72,6 +91,13 @@ ActiveRecord::Schema.define(version: 2020_06_08_032930) do
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
+  create_table "profile_skills", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "profile_id", null: false
+    t.string "name"
+    t.integer "point"
+    t.index ["profile_id"], name: "index_profile_skills_on_profile_id"
+  end
+
   create_table "profiles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.string "avatar"
@@ -84,7 +110,17 @@ ActiveRecord::Schema.define(version: 2020_06_08_032930) do
     t.integer "status"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "position"
     t.index ["user_id"], name: "index_profiles_on_user_id"
+  end
+
+  create_table "qualifications", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "title"
+    t.date "start_time"
+    t.date "end_time"
+    t.string "content"
+    t.bigint "profile_id", null: false
+    t.index ["profile_id"], name: "index_qualifications_on_profile_id"
   end
 
   create_table "skills", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -125,12 +161,14 @@ ActiveRecord::Schema.define(version: 2020_06_08_032930) do
     t.index ["user_id"], name: "index_views_on_user_id"
   end
 
+  add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "companies", "users"
   add_foreign_key "experiences", "profiles"
-  add_foreign_key "experiences", "users"
   add_foreign_key "posts", "categories"
   add_foreign_key "posts", "users"
+  add_foreign_key "profile_skills", "profiles"
   add_foreign_key "profiles", "users"
+  add_foreign_key "qualifications", "profiles"
   add_foreign_key "user_applies", "posts"
   add_foreign_key "user_applies", "users"
   add_foreign_key "views", "users"

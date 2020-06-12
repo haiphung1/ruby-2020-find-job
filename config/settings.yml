@@ -17,3 +17,11 @@ type:
   full_time: 2
 rows: 10
 index: 1
+email_regex: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+profile:
+  education_length: 250
+  phone_length: 10
+  email_length: 100
+  address_length: 250
+image:
+  accept: "image/jpg, image/jpeg, image/png"
