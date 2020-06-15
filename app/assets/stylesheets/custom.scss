@@ -1,5 +1,10 @@
 @import 'adminlte';
+@import 'toastr/toastr';
 
 ul.featureInfo {
   display: flex;
+}
+
+.title-post {
+  width: 200px;
 }

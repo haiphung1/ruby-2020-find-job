@@ -6,6 +6,7 @@ vi:
     user: "Người dùng"
     manage_job: "Quản lí công việc"
     action: "Hành động"
+    cancel: "Trở lại"
     post:
       post: "Đăng bài"
       post_job: "Đăng công việc"
@@ -29,6 +30,7 @@ vi:
       edit_post: "Chỉnh sửa công việc"
       update_success: "Cập nhập công việc thành công!"
       update_fail: "Cập nhập công việc thất bại!"
+      manage: "Quản lý công việc"
     profile:
       show_profile: "Xem CV"
       phone: "Điện thoại"
@@ -51,8 +53,22 @@ vi:
       post_title: "Bài viết"
       approved_success: "Phê duyệt thành công!"
       approved_fail: "Phê duyệt thất bại!"
+      manage: "Quản lý ứng viên"
     view_cv: "Xem CV"
     confirm: "Xác nhận"
+    company:
+      info: "Thông tin công ty"
+      update_info: "Cập nhập thông tin"
+      update: "Cập nhập"
+      name: "Tên"
+      phone: "Số điện thoại"
+      email: "Email"
+      address: "Địa chỉ"
+      description: "Mô tả"
+      create_at: "Ngày tạo"
+      update_success: "Cập nhập thông tin thành công"
+      update_fail: "Cập nhận thông tin thất bại"
+      not_found: "Không tìm thấy công ty"
   static_pages:
     home: 
       title: "Trang chủ"
@@ -81,19 +97,23 @@ vi:
         post:
           attributes:
             title:
-              blank: "Tiêu đề không thể để trống"
+              blank: "không thể để trống"
+              too_short: "Tối thiểu 10 ký tự"
             description:
-              blank: "Mô tả không thể để trống"
+              blank: "không thể để trống"
+              too_short: "Tối thiểu 10 ký tự"
             salary:
-              blank: "Lương không được để trống"
+              blank: "không được để trống"
+              too_short: "Tối thiểu 5 ký tự"
             address:
-              blank: "Địa chỉ không được để trống"
+              blank: "không được để trống"
+              too_short: "Tối thiểu 5 ký tự"
             target_date:
-              blank: "Kiều không được để trống"
+              blank: "không được để trống"
             start_date:
-              blank: "Ngày đăng không được"
+              blank: "không được để trống"
             end_date:
-              blank: "Ngày hết hạn không được để trống"
+              blank: "không được để trống"
   notification:
     post_success: "Tạo công việc thành công!"
     post_fail: "Tạo công việc thất bại!"
