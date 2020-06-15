@@ -64,6 +64,9 @@ en:
     logout: "Logout"
     register: "Register"
     create_profile: "Create profile"
+    show_profiles: "Show profiles"
+    edit_profile: "Edit_profile"
+    delete_profile: "Delete"
   footer:
     coppy_right: "Copyright © %{year} Job Finder - All Rights Reserved."
   auth:
@@ -84,7 +87,37 @@ en:
       - :day
       - :month
       - :year
-  signup: "Tạo CV"
+    formats:
+      default: "%Y/%m/%d"
+      long: "%B %d, %Y"
+      short: "%b %d"
+    abbr_day_names:
+    - SUN
+    - MON
+    - TUE
+    - WEN
+    - THU
+    - FIR
+    - SAT
+    abbr_month_names:
+    - JAN
+    - FEB
+    - MAT
+    - APL
+    - MAY
+    - JUN
+    - JUL
+    - AUG
+    - SEP
+    - OCT
+    - ELV
+    - TWE 
+  time:
+    formats:
+      default: "%Y/%m/%d"
+      long: "%B %d, %Y %H:%M"
+      short: "%d %b %H:%M"
+  signup: "Create CV"
   cv: 
     education: "Education"
     qualification: "Qualification"
@@ -97,5 +130,6 @@ en:
     position: "Position"
     email: "Email"
     phone: "Phone"
-    remove: "Xóa"
-    point: "Điểm"
+    remove: "Remove"
+    point: "Point"
+  confirmed: "You sure?"
