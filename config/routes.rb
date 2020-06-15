@@ -19,6 +19,7 @@ Rails.application.routes.draw do
       resources :users, only: %i(show)
       resources :profiles, only: %i(show)
       resources :user_applies, only: %i(index update)
+      resources :companies, only: %i(index edit update)
     end
   end
 end

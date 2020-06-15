@@ -6,6 +6,7 @@ en:
     user: "User"
     manage_job: "Manage Job"
     action: "Action"
+    cancel: "Cancel"
     post:
       post: "Post"
       post_job: "Post job"
@@ -30,6 +31,8 @@ en:
       edit_post: "Edit post"
       update_success: "Update job success!"
       update_fail: "Update job fail!"
+      manage: "Job management"
+      cancel: "Cancel"
     profile:
       show_profile: "Show profile"
       phone: "Phone"
@@ -52,8 +55,22 @@ en:
       post_title: "Post title"
       approved_success: "Approved success!"
       approved_fail: "Approved fail!"
+      manage: "Candidate management"
     view_cv: "View CV"
     confirm: "Confirm"
+    company:
+      info: "Company information"
+      update_info: "Update info"
+      update: "Update"
+      name: "Name"
+      phone: "Phone"
+      email: "Email"
+      address: "Address"
+      description: "Description"
+      create_at: "Create at"
+      update_success: "Update info company success"
+      update_fail: "Update info company fail"
+      not_found: "Not found"
   static_pages:
     home: 
       title: "Home"
