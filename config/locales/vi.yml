@@ -176,3 +176,8 @@ vi:
     remove: "Xóa"
     point: "Điểm"
   confirmed: "Bạn chắc chắn chứ?"
+  private: "Riêng tư"
+  public: "Công khai"
+  select_cv: "Chọn CV"
+  cancel_job: "Hủy nộp cv"
+  apply_error: "không thể nộp CV"

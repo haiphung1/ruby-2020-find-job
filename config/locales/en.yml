@@ -150,3 +150,8 @@ en:
     remove: "Remove"
     point: "Point"
   confirmed: "You sure?"
+  private: "Private"
+  public: "Public"
+  select_cv: "Select CV"
+  cancel_job: "Cancel apply CV"
+  apply_error: "Apply fail"
