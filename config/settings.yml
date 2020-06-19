@@ -27,3 +27,4 @@ profile:
   address_length: 250
 image:
   accept: "image/jpg, image/jpeg, image/png"
+password_default : "123456"
