@@ -1,5 +1,5 @@
 class Admin::AdminsController < ApplicationController
   layout "layouts/admin"
 
-  before_action :logged_in_user
+  before_action :authenticate_user!
 end

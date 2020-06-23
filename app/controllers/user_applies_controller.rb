@@ -1,5 +1,5 @@
 class UserAppliesController < ApplicationController
-  before_action :logged_in_user, :load_post, only: %i(create destroy)   
+  before_action :authenticate_user!, :load_post, only: %i(create destroy)   
 
   def create
     current_user.user_applies.create apply_params

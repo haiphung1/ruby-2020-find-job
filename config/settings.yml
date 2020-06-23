@@ -13,6 +13,7 @@ validation:
   salary_min: 5
   address_min: 5
   address_max: 255
+  max_length: 255
 VALID_EMAIL_REGEX: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 type:
   part_time: 1

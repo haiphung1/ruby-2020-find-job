@@ -18,7 +18,7 @@
       <div class="col-md-4 col-sm-12">
         <div class="header-right">
           <div class="user-wrap">
-            <% if logged_in? %>
+            <% if user_signed_in? %>
               <ul class="nav navbar-nav">
                 <li class="dropdown">
                   <a href="#" class="" data-toggle="dropdown">
@@ -32,14 +32,15 @@
                         <%= link_to t("user.show_profiles"), user_path(id: current_user.id) %>
                       </li>
                       <li>
-                        <%= link_to t("user.logout"), logout_path, method: :delete %>
+                        <%= link_to t("user.logout"), destroy_user_session_path, method: :delete %>
                       </li>
                     </ul>
                 </li>
+                
               </ul>  
             <% else %>
-              <div class="login-btn"><%= link_to t("user.login"), login_path %></div>
-              <div class="register-btn"><%= link_to t("user.register") ,"#" %></div>
+              <div class="login-btn"><%= link_to t("user.login"), new_user_session_path %></div>
+              <div class="register-btn"><%= link_to t("user.register"), new_user_registration_path %></div>
             <% end %>
           </div>
         </div>

@@ -1,0 +1,30 @@
+<%= provide :title, t("user.login") %>
+<div class="inner-content loginWrp">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <div class="login">
+          <div class="contctxt"><%= t "user.login" %></div>
+          <div class="formint conForm">
+            <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+              <%= render "shared/notice_messages" %>
+              <div class="input-wrap">
+                <%= f.label :email, t("auth.email"), class: "input-group-addon" %>
+                <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+              </div>
+              <div class="input-wrap">
+                 <%= f.label :password, t("auth.password"), class: "input-group-addon" %>
+                <%= f.password_field :password, autocomplete: "current-password", class: "form-control" %>
+              </div>
+              <div class="sub-btn">
+                <%= f.submit t("user.login"), class: "sbutn" %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3"></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<%= provide :title, t("user.register") %>
+<div class="inner-content loginWrp">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="login">
+          <div class="contctxt"><%= t "user.register" %></div>
+          <div class="formint conForm">
+            <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+              <%= render "shared/error_messages", object: resource %>
+              <div class="input-wrap">
+                <%= f.label :username, t("auth.username"), class: "input-group-addon" %>
+                <%= f.text_field :username, autofocus: true, autocomplete: "username", class: "form-control" %>
+              </div>
+              <div class="input-wrap">
+                <%= f.label :email, t("auth.email"), class: "input-group-addon" %>
+                <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+              </div>
+              <div class="input-wrap">
+                <%= f.label :password, t("auth.password"), class: "input-group-addon" %>
+                <%= f.password_field :password, autocomplete: "current-password", class: "form-control" %>
+              </div>
+              <div class="input-wrap">
+                <%= f.label :password, t("auth.password_confirmation"), class: "input-group-addon" %>
+                <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %>
+              </div>
+              <div class="sub-btn">
+                <%= f.submit t("user.register"), class: "sbutn" %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
