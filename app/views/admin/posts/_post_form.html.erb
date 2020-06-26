@@ -77,13 +77,26 @@
       </div>
     </div>
     <div class="col-md-12">
-      <div class="form-group">
-        <%= f.fields_for :skills do |ff| %>
-          <%= ff.label :skill do %>
+      <div class="row">
+        <div class="col-md-12">
+          <%= f.label :skill do %>
             <%= t "admin.post.skill" %> <span class="text-danger">*</span>
           <% end %>
-          <%= ff.text_field :title, class: "form-control" %>
-        <% end %>
+          <div class="card">
+            <div class="card-body">
+              <%= f.fields_for :skills do |ff| %>
+                <%= render "skill_fields", f: ff %>
+                <%= ff.check_box :_destroy %>
+                <%= ff.label :_destroy, t("admin.post.remove_skill") %>
+              <% end %>
+              <div class="links">
+                <%= link_to_add_association f, :skills do %>
+                  <i class="fas fa-plus text-info"></i>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="col-md-12">

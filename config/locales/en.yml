@@ -33,6 +33,7 @@ en:
       update_fail: "Update job fail!"
       manage: "Job management"
       cancel: "Cancel"
+      remove_skill: "Remove skill"
     profile:
       show_profile: "Show profile"
       phone: "Phone"
