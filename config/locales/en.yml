@@ -89,6 +89,8 @@ en:
   auth:
     email: "Email"
     password: "Password"
+    password_confirmation: "Password confirmation"
+    username: "User name"
     incorrect: "Email or password is incorrect"
     success: "Login success"
   apply: "Apply Now"

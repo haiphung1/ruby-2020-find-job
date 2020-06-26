@@ -87,6 +87,8 @@ vi:
   auth:
     email: "Email"
     password: "Mật khẩu"
+    password_confirmation: "Xác nhận mật khẩu"
+    username: "Tên người dùng"
     incorrect: "Email hoặc mật khẩu không đúng"
     success: "Đăng nhập thành công"
   apply: "Ứng tuyển ngay"
@@ -132,6 +134,19 @@ vi:
             address:
               blank: "không thể để trống"
               too_long: "Tối thiểu 250 ký tự"
+        user:
+          attributes:
+            email:
+              blank: "Không được để trống"
+              invalid: "không đúng định dạng"
+              taken: "đã tồn tại"
+            password:
+              blank: "không được để trống"
+              too_short: "tối thiểu 6 ký tự"
+            password_confirmation:
+              confirmation: "xác nhận không chính xác"
+            username:
+              blank: "không được để trống"
   notification:
     post_success: "Tạo công việc thành công!"
     post_fail: "Tạo công việc thất bại!"
@@ -196,4 +211,11 @@ vi:
   select_cv: "Chọn CV"
   cancel_job: "Hủy nộp cv"
   apply_error: "không thể nộp CV"
-  until_now: "Cho đến hiện tại"
+  devise:
+    failure:
+      user:
+        unauthenticated: "Bạn cần đăng nhập"
+        not_found_in_database: "Email hoặc password không chính xác"
+    sessions:
+      user:
+        signed_in: "Đăng nhập thành công!"

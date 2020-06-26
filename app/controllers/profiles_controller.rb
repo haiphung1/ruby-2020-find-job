@@ -1,5 +1,5 @@
 class ProfilesController < ApplicationController
-  before_action :logged_in_user, except: %i(index show)
+  before_action :authenticate_user!, except: %i(index show)
   before_action :correct_user, only: %i(destroy edit update)
 
   def new
