@@ -1,0 +1,12 @@
+<div class="row nested-fields">
+  <div class="col-md-8">
+    <div class="form-group">
+      <%= f.text_field :title, class: "form-control" %>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <%= link_to_remove_association f do %>
+      <i class="fas fa-minus-circle text-danger"></i>
+    <% end %>
+  </div>
+</div>

@@ -7,7 +7,7 @@ class Post < ApplicationRecord
   delegate :title, to: :category, prefix: true
   delegate :company_logo, :company_name, to: :user
 
-  accepts_nested_attributes_for :skills, allow_destroy: true
+  accepts_nested_attributes_for :skills, reject_if: :all_blank, allow_destroy: true
 
   enum target_type: {freelance: 0, parttime: 1, fulltime: 2}
 
@@ -19,7 +19,7 @@ class Post < ApplicationRecord
 
   POST_PARAMS = [:category_id, :title, :description, :salary, :address,
                  :target_type, :start_date, :end_date,
-                 skills_attributes: [:title, :_destroy]].freeze
+                 skills_attributes: [:id, :title, :_destroy]].freeze
 
   def apply_time
     [start_date, end_date].join(" - ")

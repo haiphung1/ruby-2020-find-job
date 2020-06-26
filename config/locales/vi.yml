@@ -31,6 +31,7 @@ vi:
       update_success: "Cập nhập công việc thành công!"
       update_fail: "Cập nhập công việc thất bại!"
       manage: "Quản lý công việc"
+      remove_skill: "Xóa skill"
     profile:
       show_profile: "Xem CV"
       phone: "Điện thoại"
