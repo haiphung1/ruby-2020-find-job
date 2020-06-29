@@ -32,6 +32,9 @@
                         <%= link_to t("user.show_profiles"), user_path(id: current_user.id) %>
                       </li>
                       <li>
+                        <%= link_to t("user.show_job_applieds"), job_applieds_user_path(id: current_user.id) %>
+                      </li>
+                      <li>
                         <%= link_to t("user.logout"), destroy_user_session_path, method: :delete %>
                       </li>
                     </ul>

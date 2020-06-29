@@ -83,6 +83,7 @@ vi:
     show_profiles: "cv của tôi"
     edit_profile: "Chỉnh sửa"
     delete_profile: "Xóa"
+    show_job_applieds: "Công việc đã ứng tuyển"
   footer:
     coppy_right: "Tìm việc làm %{year}"
   auth:
@@ -201,11 +202,13 @@ vi:
     add: " thêm"
     title: "Tiêu đề"
     place: "Địa chỉ"
-    position: "Vị trí"
+    position: "Vị trí  công việc"
     email: "Email"
     phone: "Số điện thoại"
     remove: "Xóa"
     point: "Điểm"
+    applied_post: "Hiện tại bạn chưa nộp cv" 
+    remove: "Xóa"
   confirmed: "Bạn chắc chắn chứ?"
   private: "Riêng tư"
   public: "Công khai"
@@ -217,6 +220,7 @@ vi:
       user:
         unauthenticated: "Bạn cần đăng nhập"
         not_found_in_database: "Email hoặc password không chính xác"
+        invalid: "không hợp lệ"
     sessions:
       user:
         signed_in: "Đăng nhập thành công!"

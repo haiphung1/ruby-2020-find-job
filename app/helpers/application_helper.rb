@@ -13,4 +13,10 @@ module ApplicationHelper
     end_time = qualification.end_time || t("until_now")
     [l(qualification.start_time), end_time].join(" - ")
   end
+
+  def applied_post_status post
+    return if current_user.nil?
+    apply_post = current_user.user_applies.find_by post_id: post
+    apply_post.status if apply_post.present?
+  end
 end
