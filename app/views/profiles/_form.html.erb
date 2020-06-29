@@ -42,26 +42,60 @@
   </div>
   <div class="listWrpService featured-wrap candidate candetail">
     <h2><%= t "cv.qualification" %></h2>
-      <%= f.fields_for :qualifications do |qualification| %>
-        <%= render "qualification_fields", f: qualification %>
-      <% end %>
+      <div class="qualifications">
+        <%= f.fields_for :qualifications do |qualification| %>
+          <%= render "qualification_fields", f: qualification %>
+          <%= qualification.check_box :_destroy %>
+          <%= qualification.label :_destroy, t("cv.remove") %>
+        <% end %>
+      </div>
+      <div class="links">
+        <%= link_to_add_association f, :qualifications,
+                                        data: {
+                                            association_insertion_node: ".qualifications",
+                                            association_insertion_method: :append,
+                                        } do %>
+          <i class="fas fa-plus text-info"></i>
+        <% end %>
+      </div>
   </div>
   <div class="listWrpService featured-wrap candidate candetail">
     <h2><%= t "cv.experience" %></h2>
-    <%= f.fields_for :experiences do |experience| %>
-      <div class="resumeInfo">
-        <div class="head">
-          <%= experience.text_field :title, placeholder: t("cv.title"), class: "form-control" %>
-        </div>
+    <div class="experiences">
+      <%= f.fields_for :experiences do |experience| %>
+        <%= render "experience_fields", f: experience %>
+        <%= experience.check_box :_destroy %>
+        <%= experience.label :_destroy, t("cv.remove") %>
+      <% end %>
+    </div>
+    <div class="links">
+        <%= link_to_add_association f, :experiences,
+                                        data: {
+                                            association_insertion_node: ".experiences",
+                                            association_insertion_method: :append,
+                                        } do %>
+          <i class="fas fa-plus text-info"></i>
+        <% end %>
       </div>
-      <%= experience.text_area :description, class: "form-control" %>
-    <% end %>
   </div>
-  <div class="listWrpService featured-wrap candidate candetail profile_skills">
+  <div class="listWrpService featured-wrap candidate candetail">
     <h2><%= t "cv.skill" %></h2>
-    <%= f.fields_for :profile_skills do |profile_skill| %>
-      <%= render "profile_skill_fields", f: profile_skill %>
-    <% end %>
+    <div class="profile_skills">
+      <%= f.fields_for :profile_skills do |profile_skill| %>
+        <%= render "profile_skill_fields", f: profile_skill %>
+          <%= profile_skill.check_box :_destroy %>
+          <%= profile_skill.label :_destroy, t("cv.remove") %>
+      <% end %>
+    </div>
+    <div class="links">
+        <%= link_to_add_association f, :profile_skills,
+                                        data: {
+                                            association_insertion_node: ".profile_skills",
+                                            association_insertion_method: :append,
+                                        } do %>
+          <i class="fas fa-plus text-info"></i>
+        <% end %>
+      </div>
   </div>
   <%= f.submit t("signup"), class: "btn btn-primary" %>
 <% end %>

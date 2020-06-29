@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
     resources :users do
       member do
+        get "/job_applieds", to: "job_applieds#index"
         resources :profiles, except: :index do
           patch "public", to: "status_profiles#update"
         end

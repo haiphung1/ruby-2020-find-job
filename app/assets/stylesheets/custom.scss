@@ -41,6 +41,20 @@ body {
 .listImg img {
   height: 150px;
   width: 150px;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
+}
+
+.featured-wrap h3 a {
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.form-control {
+  font-size: 15px;
+  line-height: 20px;
+  margin-top: 10px;
 }
