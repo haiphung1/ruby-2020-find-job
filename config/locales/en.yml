@@ -72,6 +72,7 @@ en:
       update_success: "Update info company success"
       update_fail: "Update info company fail"
       not_found: "Not found"
+    search: "Search"
   static_pages:
     home: 
       title: "Home"

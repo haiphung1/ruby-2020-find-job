@@ -2,7 +2,8 @@ class Admin::PostsController < Admin::AdminsController
   before_action :load_post, only: %i(edit update destroy)
 
   def index
-    @posts = current_user.posts
+    @q = Post.ransack params[:q]
+    @posts = params.blank? ? current_user.posts : @q.result
   end
 
   def new

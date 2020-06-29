@@ -1,0 +1,32 @@
+<%= search_form_for @q, url: admin_posts_path do |f| %>
+  <div class="row">
+    <div class="col-md-2">
+      <div class="form-group">
+        <%= f.search_field :title_cont, class: "form-control", placeholder: t("admin.post.title") %>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="form-group">
+        <%= f.search_field :start_date_gteq, class: "form-control", placeholder: t("admin.post.start_date") %>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="form-group">
+        <%= f.search_field :end_date_lteq, class: "form-control", placeholder: t("admin.post.end_date") %>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="form-group">
+        <%= f.search_field :salary_gteq, class: "form-control", placeholder: t("admin.post.salary") %>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="form-group">
+        <%= f.search_field :salary_lteq, class: "form-control", placeholder: t("admin.post.salary") %>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <%= f.submit t("admin.search"), class: "btn btn-info btn-block mt-2" %>
+    </div>
+  </div>
+<% end %>

@@ -25,6 +25,14 @@
       </div>
       <div class="card card-primary">
         <div class="card-header">
+          <h3 class="card-title"><%= t "admin.post.skill" %></h3>
+        </div>
+        <div class="card-body">
+          <%= render partial: "admin/users/skill", collection: @profile.skills %>
+        </div>
+      </div>
+      <div class="card card-primary">
+        <div class="card-header">
           <h3 class="card-title"><%= t "admin.profile.about_me" %></h3>
         </div>
         <div class="card-body">
@@ -49,6 +57,13 @@
                   <div class="timeline-item">
                     <h3 class="timeline-header"><%= t "admin.profile.experience" %></h3>
                     <%= render partial: "experience", collection: @experiences %>
+                  </div>
+                </div>
+                <div>
+                  <i class="fas fa-briefcase"></i>
+                  <div class="timeline-item">
+                    <h3 class="timeline-header"><%= t "admin.profile.experience" %></h3>
+                    <%= render partial: "qualification", collection: @qualifications %>
                   </div>
                 </div>
               </div>
