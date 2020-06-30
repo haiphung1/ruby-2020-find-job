@@ -1,7 +1,11 @@
 <div class="nested-fields">
+  <div class="resumeInfo">
     <%= f.text_field :title, placeholder: t("cv.title"), class: "form-control" %>
-    <%= f.date_field :start_time, class: "form-control", class: "form-control" %> - 
-    <%= f.date_field :end_time, class: "form-control", class: "form-control" %>
+    <%= errors_for f, :title %>
+    <%= f.date_field :start_time, class: "form-control", class: "form-control qualification-time" %> - 
+    <%= f.date_field :end_time, class: "form-control", class: "form-control qualification-time" %>
+    <%= errors_for f, :start_time %>
+  </div>
     <%= f.text_area :content, class: "form-control", class: "form-control" %>
     <%= link_to_remove_association f do %>
         <i class="fas fa-minus-circle text-danger"></i>

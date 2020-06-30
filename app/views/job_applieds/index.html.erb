@@ -1,9 +1,10 @@
-<div class="featured-wrap">
+<div class="featured-wrap loginWrp">
   <div class="container"> 
     <% if @posts.any? %>
       <ul class="listService">
         <%= render @posts %>
       </ul>
+      <%= paginate @posts %>
     <% else %>
       <h2><%= t "cv.applied_post" %></h2>
     <% end %>

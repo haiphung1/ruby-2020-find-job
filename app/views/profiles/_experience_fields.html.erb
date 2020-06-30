@@ -2,6 +2,7 @@
   <div class="resumeInfo">
     <div class="head">
       <%= f.text_field :title, placeholder: t("cv.title"), class: "form-control" %>
+      <%= errors_for f, :title %>
     </div>
   </div>
   <%= f.text_area :description, class: "form-control" %>

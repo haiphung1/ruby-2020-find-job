@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_26_013604) do
+ActiveRecord::Schema.define(version: 2020_06_30_094205) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -58,7 +58,7 @@ ActiveRecord::Schema.define(version: 2020_06_26_013604) do
   create_table "experiences", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "profile_id", null: false
     t.string "title"
-    t.string "description"
+    t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["profile_id"], name: "index_experiences_on_profile_id"
@@ -103,7 +103,7 @@ ActiveRecord::Schema.define(version: 2020_06_26_013604) do
     t.string "avatar"
     t.integer "phone"
     t.string "email"
-    t.string "education"
+    t.text "education"
     t.string "address"
     t.string "facebook_link"
     t.string "title"
@@ -118,7 +118,7 @@ ActiveRecord::Schema.define(version: 2020_06_26_013604) do
     t.string "title"
     t.date "start_time"
     t.date "end_time"
-    t.string "content"
+    t.text "content"
     t.bigint "profile_id", null: false
     t.index ["profile_id"], name: "index_qualifications_on_profile_id"
   end
