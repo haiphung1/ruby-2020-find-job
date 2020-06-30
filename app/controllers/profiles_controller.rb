@@ -1,6 +1,8 @@
 class ProfilesController < ApplicationController
   before_action :authenticate_user!, except: %i(index show)
   before_action :correct_user, only: %i(destroy edit update)
+  before_action :check_valid_profile_applied, only: :destroy
+
   authorize_resource
 
   def new
@@ -63,5 +65,19 @@ class ProfilesController < ApplicationController
   def correct_user
     @profile = current_user.profiles.find_by id: params[:id]
     redirect_to root_url unless @profile
+  end
+
+  def check_valid_profile_applied
+    @profile_applied = current_user.user_applies.find_by profile_id: params[:id]
+
+    if @profile_applied.nil?
+      flash[:danger] = t "admin.profile.user_not_found"
+      redirect_to root_url
+    else
+      return if @profile_applied.pending? 
+      
+      flash[:danger] = t "cv.cv_approved"
+      redirect_to user_path
+    end
   end
 end

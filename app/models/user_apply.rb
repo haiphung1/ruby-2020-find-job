@@ -11,4 +11,8 @@ class UserApply < ApplicationRecord
 
   delegate :title, to: :post, prefix: true
   delegate :username, to: :user, prefix: true
+
+  def status_i18n
+    I18n.t("enums.userapply.status.#{status}")
+  end
 end

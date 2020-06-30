@@ -2,7 +2,7 @@ class Admin::UsersController < Admin::AdminsController
   before_action :load_user, only: %i(show)
 
   def show
-    @profiles = @user.profiles.public_cv
+    @profiles = @user.profiles.public_cv.page(params[:page]).per Settings.profile_per_page
   end
 
   private
