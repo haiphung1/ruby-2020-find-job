@@ -249,3 +249,4 @@ vi:
     sessions:
       user:
         signed_in: "Đăng nhập thành công!"
+  authorized: "Bạn không có quyền truy cập trang này."

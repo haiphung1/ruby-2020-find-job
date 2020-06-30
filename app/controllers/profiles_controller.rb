@@ -1,6 +1,7 @@
 class ProfilesController < ApplicationController
   before_action :authenticate_user!, except: %i(index show)
   before_action :correct_user, only: %i(destroy edit update)
+  authorize_resource
 
   def new
     @profile = current_user.profiles.build.tap do |p|
