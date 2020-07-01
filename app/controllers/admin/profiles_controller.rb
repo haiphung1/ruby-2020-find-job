@@ -3,6 +3,7 @@ class Admin::ProfilesController < Admin::AdminsController
 
   def show
     @experiences = @profile.experiences
+    @qualifications = @profile.qualifications
   end
 
   private

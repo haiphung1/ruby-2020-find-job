@@ -70,8 +70,9 @@ vi:
       update_success: "Cập nhập thông tin thành công"
       update_fail: "Cập nhận thông tin thất bại"
       not_found: "Không tìm thấy công ty"
+    search: "Tìm kiếm"
   static_pages:
-    home: 
+    home:
       title: "Trang chủ"
     about:
       title: "Về chúng tôi"
