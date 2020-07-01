@@ -1,2 +1,26 @@
 @import 'adminlte';
 @import 'toastr/toastr';
+
+.alert-primary {
+  color: #004085;
+  background-color: #cce5ff;
+  border-color: #b8daff;
+}
+
+thead tr th {
+  white-space: nowrap;
+  text-overflow: clip;
+}
+
+#example_filter, #example_length, #example_info {
+  display: none;
+}
+
+#example_paginate {
+  float: right;
+}
+
+.td-action {
+  float: right;
+  border: none;
+}

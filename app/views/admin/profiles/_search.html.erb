@@ -1,0 +1,22 @@
+<%= search_form_for @q, url: admin_profiles_path do |f| %>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <%= f.search_field :title_cont, class: "form-control", placeholder: "Vị trí công việc" %>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="form-group">
+        <%= f.search_field :address_cont, class: "form-control", placeholder: "Địa chỉ" %>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="form-group">
+        <%= f.search_field :profile_skills_name_cont, class: "form-control", placeholder: "Kỹ năng" %>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <%= f.submit t("admin.search"), class: "btn btn-info btn-block" %>
+    </div>
+  </div>
+<% end %>

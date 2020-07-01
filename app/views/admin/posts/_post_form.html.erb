@@ -1,5 +1,4 @@
 <%= form_for [:admin, @post] do |f| %>
-  <%= render "shared/error_messages", object: f.object %>
   <div class="row">
     <div class="col-md-6">
       <div class="form-group">
@@ -13,6 +12,7 @@
           <%= t "admin.post.address" %> <span class="text-danger">*</span>
         <% end %>
         <%= f.text_field :address, class: "form-control" %>
+        <%= errors_for f, :address %>
       </div>
     </div>
     <div class="col-md-6">
@@ -23,6 +23,7 @@
               <%= t "admin.post.start_date" %> <span class="text-danger">*</span>
             <% end %>
             <%= f.date_field :start_date, class: "form-control" %>
+            <%= errors_for f, :start_date %>
           </div>
         </div>
         <div class="col-sm-6">
@@ -31,6 +32,7 @@
               <%= t "admin.post.end_date" %> <span class="text-danger">*</span>
             <% end %>
             <%= f.date_field :end_date, class: "form-control" %>
+            <%= errors_for f, :end_date %>
           </div>
         </div>
         <div class="col-sm-6">
@@ -39,6 +41,7 @@
               <%= t "admin.post.salary" %> <span class="text-danger">*</span>
             <% end %>
             <%= f.number_field :salary, class: "form-control" %>
+            <%= errors_for f, :salary %>
           </div>
         </div>
         <div class="col-sm-6">
@@ -54,6 +57,7 @@
               <%= f.radio_button :target_type, "fulltime" %>
               <%= f.label :target_type, t("admin.post.full_time") %>
             </div>
+            <%= errors_for f, :target_type %>
           </div>
         </div>
       </div>
@@ -66,6 +70,7 @@
           <%= t "admin.post.title" %> <span class="text-danger">*</span>
         <% end %>
         <%= f.text_field :title, class: "form-control" %>
+        <%= errors_for f, :title %>
       </div>
     </div>
     <div class="col-md-12">
@@ -74,6 +79,7 @@
           <%= t "admin.post.description" %> <span class="text-danger">*</span>
         <% end %>
         <%= f.text_area :description, class: "form-control", rows: Settings.rows %>
+        <%= errors_for f, :description %>
       </div>
     </div>
     <div class="col-md-12">
@@ -86,7 +92,7 @@
             <div class="card-body">
               <%= f.fields_for :skills do |ff| %>
                 <%= render "skill_fields", f: ff %>
-                <%= ff.check_box :_destroy %>
+                <%= ff.check_box :_destroy, class: "check_bok_none" %>
                 <%= ff.label :_destroy, t("admin.post.remove_skill") %>
               <% end %>
               <div class="links">
@@ -102,7 +108,7 @@
     <div class="col-md-12">
       <div class="form-group text-center">
         <%= link_to t("admin.cancel"), admin_posts_path, class: "btn btn-danger" %>
-        <%= f.submit t("admin.post.post_job"), class: "btn btn-primary" %>
+        <%= f.submit yield(:button_text), class: "btn btn-primary" %>
       </div>
     </div>
   </div>

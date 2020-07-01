@@ -11,11 +11,14 @@ class Post < ApplicationRecord
 
   enum target_type: {freelance: 0, parttime: 1, fulltime: 2}
 
-  validates :title, presence: true, length: {minimum: Settings.validation.title_min, maximum: Settings.validation.title_max}
-  validates :description, presence: true, length: {minimum: Settings.validation.description_min, maximum: Settings.validation.description_max}
-  validates :salary, presence: true, length: {minimum: Settings.validation.salary_min}
-  validates :address, presence: true, length: {minimum: Settings.validation.address_min, maximum: Settings.validation.address_max}
+  validates :title, presence: true, length: {maximum: Settings.validation.title_max}
+  validates :description, presence: true, length: {maximum: Settings.validation.description_max}
+  validates :salary, presence: true
+  validates :address, presence: true, length: {maximum: Settings.validation.address_max}
+  validate :end_date_is_after_start_date
+
   validates :target_type, :start_date, :end_date, presence: true
+
 
   POST_PARAMS = [:category_id, :title, :description, :salary, :address,
                  :target_type, :start_date, :end_date,
@@ -23,5 +26,15 @@ class Post < ApplicationRecord
 
   def apply_time
     [start_date, end_date].join(" - ")
+  end
+
+  private
+
+  def end_date_is_after_start_date
+    return if end_date.blank? || start_date.blank?
+  
+    if end_date < start_date
+      errors.add(:end_date, "không được nhỏ hơn start_date") 
+    end 
   end
 end

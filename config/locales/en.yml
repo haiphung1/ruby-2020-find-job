@@ -34,6 +34,7 @@ en:
       manage: "Job management"
       cancel: "Cancel"
       remove_skill: "Remove skill"
+      freelance: "Freelance"
     profile:
       show_profile: "Show profile"
       phone: "Phone"
@@ -44,6 +45,7 @@ en:
       education: "Education"
       process: "Process"
       experience: "Experience"
+      qualification: "Qualification"
       cancel: "Cancel"
       user_not_found: "User not found!"
       profile_not_found: "Profile not found!"
@@ -237,3 +239,6 @@ en:
   apply_error: "Apply fail"
   until_now: "Until now"
   authorized: "You are not authorized to access this page."
+  status:
+    pending: "Pending"
+    approved: "Approved"

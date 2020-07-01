@@ -107,7 +107,7 @@ ActiveRecord::Schema.define(version: 2020_06_30_094205) do
     t.string "address"
     t.string "facebook_link"
     t.string "title"
-    t.integer "status", default: 0, null: false
+    t.integer "status"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "position"

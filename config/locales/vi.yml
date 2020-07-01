@@ -32,6 +32,7 @@ vi:
       update_fail: "Cập nhập công việc thất bại!"
       manage: "Quản lý công việc"
       remove_skill: "Xóa skill"
+      freelance: "freelance"
     profile:
       show_profile: "Xem CV"
       phone: "Điện thoại"
@@ -42,6 +43,7 @@ vi:
       education: "Học tập"
       process: "Quá trình"
       experience: "Kinh nghiệm"
+      qualification: "Trình độ chuyên môn"
       cancel: "Trở lại"
       user_not_found: "Không tìm thấy người dùng!"
       profile_not_found: "Không tìm thấy CV!"
@@ -121,6 +123,8 @@ vi:
             start_date:
               blank: "không được để trống"
             end_date:
+              blank: "không được để trống"
+            target_type:
               blank: "không được để trống"
         profile:
           attributes:
@@ -250,3 +254,6 @@ vi:
       user:
         signed_in: "Đăng nhập thành công!"
   authorized: "Bạn không có quyền truy cập trang này."
+  status:
+    pending: "Đang chờ duyệt"
+    approved: "Đã duyệt"

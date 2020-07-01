@@ -31,6 +31,11 @@
           <% end %>
         </li>
         <li class="nav-item">
+          <%= link_to admin_profiles_path, class: "nav-link" do %>
+            <i class="fas fa-search"></i> Tìm ứng viên
+          <% end %>
+        </li>
+        <li class="nav-item">
           <%= link_to destroy_user_session_path, method: :delete, class: "nav-link" do %>
             <i class="fas fa-sign-out-alt"></i> <%= t "user.logout" %>
           <% end %>

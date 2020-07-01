@@ -3,7 +3,7 @@ class Admin::PostsController < Admin::AdminsController
 
   def index
     @q = Post.ransack params[:q]
-    @posts = params.blank? ? current_user.posts : @q.result
+    @posts = params.blank? ? current_user.posts.by_created_at : @q.result.by_created_at
   end
 
   def new

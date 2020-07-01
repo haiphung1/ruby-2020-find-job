@@ -1,8 +1,8 @@
 <%= provide :title, t("admin.company.info") %>
 <div class="container-fluid">
   <div class="row justify-content-center">
-    <div class="col-md-8">
-      <div class="card">
+    <div class="col-md-10">
+      <div class="card card-info">
         <div class="card-header">
           <h3 class="card-title"><%= t "admin.company.info" %></h3>
         </div>
@@ -38,7 +38,7 @@
         </div>
       </div>
       <div class="float-right">
-        <%= link_to t("admin.company.update_info"), edit_admin_company_path(@company), class: "btn btn-primary btn-sm" %>
+        <%= link_to t("admin.company.update_info"), edit_admin_company_path(@company), class: "btn btn-info btn-sm" %>
       </div>
     </div>
   </div>
