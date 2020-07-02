@@ -137,6 +137,8 @@ vi:
             address:
               blank: "không thể để trống"
               too_long: "Tối thiểu 250 ký tự"
+            title:
+              blank: "không thể để trống"
         user:
           attributes:
             email:
@@ -150,6 +152,26 @@ vi:
               confirmation: "xác nhận không chính xác"
             username:
               blank: "không được để trống"
+        qualification:
+          attributes:            
+            start_time:
+              blank: "không được để trống"
+            title:
+              too_long: "Tối thiểu 250 ký tự"
+        profile_skill:
+          attributes:            
+            point:
+              greater_than_or_equal_to: "phải lớn hơn 0"
+              less_than_or_equal_to: "phải nhỏ hơn 100"
+              too_long: "phải nhỏ hơn hoặc bằng 100"
+            name:
+              too_long: "Tối thiểu 250 ký tự"
+        experience:
+          attributes:
+            title:
+              too_long: "Tối thiểu 250 ký tự"
+      messages:
+        record_invalid: "Bản ghi không hợp lệ"
   notification:
     post_success: "Tạo công việc thành công!"
     post_fail: "Tạo công việc thất bại!"
@@ -209,7 +231,9 @@ vi:
     remove: "Xóa"
     point: "Điểm"
     applied_post: "Hiện tại bạn chưa nộp cv" 
-    remove: "Xóa"
+    title: "Tiêu đề"
+    start_time: "Phải bé hơn thời gian hiện tại"
+    point_valid: "Điểm phải lớn hơn 0 nhỏ hơn 100"
   confirmed: "Bạn chắc chắn chứ?"
   private: "Riêng tư"
   public: "Công khai"

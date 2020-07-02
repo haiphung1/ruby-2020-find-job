@@ -18,7 +18,7 @@ class UserAppliesController < ApplicationController
   end
 
   def load_post
-    @post = Post.find_by(id: params[:id] || params[:post_id])
+    @post = Post.find_by id: params[:id] || params[:post_id]
     return if @post 
     
     flash[:danger] = t "admin.post.not_found"

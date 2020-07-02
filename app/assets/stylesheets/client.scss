@@ -1,0 +1,88 @@
+ul.featureInfo {
+    display: flex;
+    &.innerfeat li {
+      flex: auto;
+      text-align: center;
+      align-self: center;
+      vertical-align: middle;
+    }
+  }
+  
+  .title-post {
+    width: 200px;
+  }
+  
+  .click-btn a {
+    width: 100%;
+    text-align: center;
+    box-shadow: 0px 1px 20px 0px rgba(0,0,0,0.2);
+    border-radius: 1.25rem;
+  }
+  
+  select {
+    word-wrap: normal;
+    color: black;
+    margin-left: 10px;
+  }
+  
+  .time-btn {
+    margin-bottom: 10px;
+  }
+  
+  .dropdown-menu {
+    position: absolute !important;
+  }
+  
+  body {
+    font-size: 15px;
+  }
+  
+  .listImg img {
+    height: 150px;
+    width: 150px;
+    object-fit: contain;
+    object-position: center;
+  }
+  
+  .featured-wrap h3 a {
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+.loginWrp {
+    background: #f3f2f2;
+    display: block;
+    height: 100vh;
+}
+
+input {
+  &#profile_title {
+  width: 80%;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  }
+
+  &#profile_address {
+    margin-bottom: 10px;
+  }
+  
+  &.qualification-time {
+    width: 44% !important;
+  }
+
+  &.form-control {
+    font-size: 15px;
+    line-height: 20px;
+    margin-top: 10px;
+    display: inline-block;
+    width: 90% ;
+  }
+}
+
+textarea{
+  width: 90%;
+  margin: 5px 5px;
+}

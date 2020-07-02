@@ -1,5 +1,5 @@
 class Profile < ApplicationRecord
-  PROFILE_PERMIT = [:position, :address, :email, :phone, :education, :avatar,
+  PROFILE_PERMIT = [:position, :address, :email, :phone, :education, :avatar, :title,
                     qualifications_attributes: [:id, :title, :content, :start_time, :end_time, :_destroy], 
                     experiences_attributes: [:id, :title, :description, :_destroy],
                     profile_skills_attributes: [:id, :name, :point, :_destroy]].freeze
@@ -18,7 +18,8 @@ class Profile < ApplicationRecord
   enum status: {private_cv: 0, public_cv: 1}
   has_one_attached :image
 
-  validates :education, presence: true, length: {maximum: Settings.profile.education_length}
+  validates :education, presence: true, length: {maximum: Settings.validation.max_length}
+  validates :title, presence: true, length: {maximum: Settings.validation.max_length}
   validates :phone, presence: true, length: {maximum: Settings.profile.phone_length}
   validates :email, presence: true, format: {with: VALID_EMAIL_REGEX}, length: {maximum: Settings.profile.email_length}
   validates :address, presence: true, length: {maximum: Settings.profile.address_length}

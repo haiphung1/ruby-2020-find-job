@@ -73,6 +73,79 @@ en:
       update_fail: "Update info company fail"
       not_found: "Not found"
     search: "Search"
+  activerecord:
+    errors:
+      models:
+        post:
+          attributes:
+            title:
+              blank: "can't leave blank"
+              too_short: "minimum 10 letter"
+            description:
+              blank: "can't leave blank"
+              too_short: "minimum 10 letter"
+            salary:
+              blank: "can't leave blank"
+              too_short: "minimum 5 letter"
+            address:
+              blank: "can't leave blank"
+              too_short: "minimum 5 letter"
+            target_date:
+              blank: "can't leave blank"
+            start_date:
+              blank: "can't leave blank"
+            end_date:
+              blank: "can't leave blank"
+        profile:
+          attributes:
+            education:
+              blank: "can't leave blank"
+              too_long: "minimum 250 letter"
+            phone:
+              blank: "can't leave blank"
+              too_long: "maximum 10 letter "
+            email:
+              blank: "can't leave blank"
+              invalid: "Chưa đúng định dạng"
+              too_long: "maximum 100 letter "
+            address:
+              blank: "can't leave blank"
+              too_long: "minimum 250 letter"
+            title:
+              blank: "can't leave blank"
+        user:
+          attributes:
+            email:
+              blank: "can't leave blank"
+              invalid: "invalid"
+              taken: "has exist"
+            password:
+              blank: "can't leave blank"
+              too_short: "minimum 6 letter"
+            password_confirmation:
+              confirmation: "not same password"
+            username:
+              blank: "can't leave blank"
+        qualification:
+          attributes:            
+            start_time:
+              blank: "can't leave blank"
+            title:
+              too_long: "Tối thiểu 250 ký tự"
+        profile_skill:
+          attributes:            
+            point:
+              greater_than_or_equal_to: "must greater than 0"
+              less_than_or_equal_to: "must less than 100"
+              too_long: "phải nhỏ hơn hoặc bằng 100"
+            name:
+              too_long: "Tối thiểu 250 ký tự"
+        experience:
+          attributes:
+            title:
+              too_long: "Tối thiểu 250 ký tự"
+      messages:
+        record_invalid: "invalid record"
   static_pages:
     home: 
       title: "Home"
@@ -153,6 +226,9 @@ en:
     phone: "Phone"
     remove: "Remove"
     point: "Point"
+    title: "Title"
+    start_time: "Must be less than the current date"
+    point_valid: "Point must greater than 0 and less than 100"
   confirmed: "You sure?"
   private: "Private"
   public: "Public"
