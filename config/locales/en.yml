@@ -236,3 +236,4 @@ en:
   cancel_job: "Cancel apply CV"
   apply_error: "Apply fail"
   until_now: "Until now"
+  authorized: "You are not authorized to access this page."

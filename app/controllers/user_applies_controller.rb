@@ -1,6 +1,7 @@
 class UserAppliesController < ApplicationController
   before_action :authenticate_user!, :load_post, only: %i(create destroy)   
-
+  authorize_resource
+  
   def create
     current_user.user_applies.create apply_params
     respond_to :js

@@ -11,6 +11,7 @@ require('jquery')
 require('datatables.net-bs4')
 require('packs/datatable')
 require('cocoon')
+require('packs/custom')
 
 import '@fortawesome/fontawesome-free/js/all';
 import $ from 'jquery';

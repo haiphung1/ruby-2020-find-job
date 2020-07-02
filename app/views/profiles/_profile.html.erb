@@ -23,11 +23,17 @@
           <div class="col-md-4">
             <div class="click-btn">
               <ul>
-                <li class="click-btn">
-                  <%= link_to status_profiles(profile), profile_public_path(profile_id: profile.id), method: :patch %>
-                </li>
-                <li class="click-btn"><%= link_to t("user.edit_profile"), edit_profile_path(profile) %></li>
-                <li class="click-btn"><%= link_to t("user.delete_profile"), profile, method: :delete, data: {confirm: t("confirmed")} %></li>
+                <% if can? :update, Profile %>
+                  <li class="click-btn">
+                    <%= link_to status_profiles(profile), profile_public_path(profile_id: profile.id), method: :patch %>
+                  </li>
+                <% end %>
+                <% if can? :edit, Profile %>
+                  <li class="click-btn"><%= link_to t("user.edit_profile"), edit_profile_path(profile) %></li>
+                <% end %>
+                <% if can? :destroy, Profile %>
+                  <li class="click-btn"><%= link_to t("user.delete_profile"), profile, method: :delete, data: {confirm: t("confirmed")} %></li>
+                <% end %>
               </ul>
             </div>
           </div>
