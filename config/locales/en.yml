@@ -131,19 +131,19 @@ en:
             start_time:
               blank: "can't leave blank"
             title:
-              too_long: "Tối thiểu 250 ký tự"
+              too_long: "minimum 250 letter"
         profile_skill:
           attributes:            
             point:
               greater_than_or_equal_to: "must greater than 0"
               less_than_or_equal_to: "must less than 100"
-              too_long: "phải nhỏ hơn hoặc bằng 100"
+              too_long: "less than 100"
             name:
-              too_long: "Tối thiểu 250 ký tự"
+              too_long: "minimum 250 letter"
         experience:
           attributes:
             title:
-              too_long: "Tối thiểu 250 ký tự"
+              too_long: "minimum 250 letter"
       messages:
         record_invalid: "invalid record"
   static_pages:
@@ -228,7 +228,7 @@ en:
     point: "Point"
     title: "Title"
     start_time: "Must be less than the current date"
-    point_valid: "Point must greater than 0 and less than 100"
+    cv_approved: "Your's cv has been approved. You can't cancel job now"
   confirmed: "You sure?"
   private: "Private"
   public: "Public"
@@ -237,3 +237,13 @@ en:
   apply_error: "Apply fail"
   until_now: "Until now"
   authorized: "You are not authorized to access this page."
+  enums:
+  userapply:
+    status:
+      pending: Pending
+      approved: Approved
+  post:
+    target_type: 
+      freelance: Freelance
+      parttime: Parttime
+      fulltime: Fulltime

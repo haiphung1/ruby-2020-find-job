@@ -234,6 +234,7 @@ vi:
     title: "Tiêu đề"
     start_time: "Phải bé hơn thời gian hiện tại"
     point_valid: "Điểm phải lớn hơn 0 nhỏ hơn 100"
+    cv_approved: "Hồ sơ của bạn đã được chấp thuận bạn không thể hủy bây giờ"
   confirmed: "Bạn chắc chắn chứ?"
   private: "Riêng tư"
   public: "Công khai"
@@ -250,3 +251,13 @@ vi:
       user:
         signed_in: "Đăng nhập thành công!"
   authorized: "Bạn không có quyền truy cập trang này."
+  enums:
+    userapply:
+      status:
+        pending: Đang duyệt
+        approved: Được chấp thuận
+    post:
+      target_type: 
+        freelance: Tự do
+        parttime: Bán thời gian
+        fulltime: Toàn thời gian

@@ -24,4 +24,8 @@ class Post < ApplicationRecord
   def apply_time
     [start_date, end_date].join(" - ")
   end
+
+  def target_type_i18n
+    I18n.t("enums.post.target_type.#{target_type}")
+  end
 end

@@ -17,6 +17,6 @@ module ApplicationHelper
   def applied_post_status post
     return if current_user.nil?
     apply_post = current_user.user_applies.find_by post_id: post
-    apply_post.status if apply_post.present?
+    apply_post.status_i18n if apply_post.present?
   end
 end
