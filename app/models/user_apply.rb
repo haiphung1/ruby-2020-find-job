@@ -5,10 +5,11 @@ class UserApply < ApplicationRecord
   belongs_to :post
   belongs_to :profile
 
-  enum status: {pending: 0, approved: 1}
+  enum status: {pending: 0, approved: 1, cancel: 2}
 
   scope :post_applies, -> posts_id {where post_id: posts_id}
 
   delegate :title, to: :post, prefix: true
   delegate :username, to: :user, prefix: true
+  delegate :email, to: :user, prefix: true
 end

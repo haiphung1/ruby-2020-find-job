@@ -33,3 +33,4 @@ profile:
 image:
   accept: "image/jpg, image/jpeg, image/png"
 password_default : "123456"
+DEFAULT_EMAIL: "noreply@example.com"
