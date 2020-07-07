@@ -6,7 +6,7 @@
   <td><%= user_apply.user_username %></td>
   <td>
     <span class="badge badge-<%= get_span_class user_apply %>">
-      <%= user_apply.status %>
+      <%= I18n.t :"status.#{user_apply.status}" %>
     </span>
   </td>
   <td>
@@ -16,6 +16,9 @@
     <% if user_apply.pending? %>
       <%= link_to [:admin, user_apply], method: :patch, class: "btn btn-primary btn-sm" do %>
         <i class="fas fa-check"></i>
+      <% end %>
+      <%= link_to [:admin, user_apply], method: :delete, class: "btn btn-danger btn-sm" do %>
+        <i class="fas fa-times-circle"></i>
       <% end %>
     <% end %>
   </td>
