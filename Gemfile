@@ -28,6 +28,8 @@ gem "webpacker", "~> 4.0"
 gem "devise"
 gem "ransack"
 gem "cancancan"
+gem "sidekiq"
+gem "figaro"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]

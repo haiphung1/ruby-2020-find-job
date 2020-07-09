@@ -1,5 +1,5 @@
 class Admin::UserAppliesController < Admin::AdminsController
-  before_action :load_user_apply, only: %i(update)
+  before_action :load_user_apply, only: %i(update destroy)
 
   def index
     posts_id = current_user.posts.pluck :id
@@ -8,10 +8,23 @@ class Admin::UserAppliesController < Admin::AdminsController
 
   def update
     if @user_apply.approved!
+      SendEmailJob.perform_later(@user_apply, :approved)
       flash[:success] = t "admin.apply.approved_success"
     else
       flash[:danger] = t "admin.apply.approved_fail"
     end
+    
+    redirect_to admin_user_applies_path
+  end
+
+  def destroy
+    if @user_apply.cancel!
+      SendEmailJob.perform_later(@user_apply, :cancel)
+      flash[:success] = t "admin.apply.cancel_success"
+    else
+      flash[:danger] = t "admin.apply.cancel_fail"
+    end
+    
     redirect_to admin_user_applies_path
   end
 

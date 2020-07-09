@@ -55,6 +55,8 @@ vi:
       approved_success: "Phê duyệt thành công!"
       approved_fail: "Phê duyệt thất bại!"
       manage: "Quản lý ứng viên"
+      cancel_success: "Hủy thành công"
+      cancel_fail: "Hủy thất bại"
     view_cv: "Xem CV"
     confirm: "Xác nhận"
     company:
@@ -256,8 +258,14 @@ vi:
       status:
         pending: Đang duyệt
         approved: Được chấp thuận
+        cancel: "Hủy"
     post:
       target_type: 
         freelance: Tự do
         parttime: Bán thời gian
         fulltime: Toàn thời gian
+  email:
+    hi: "Xin chào"
+    subject: "Thông báo ứng viên"
+    approved_job: "CV của bạn đã được chấp thuận"
+    cancel_job: "CV của bạn không được chấp nhận"
