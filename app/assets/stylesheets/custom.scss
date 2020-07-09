@@ -1,2 +1,10 @@
 @import 'adminlte';
 @import 'toastr/toastr';
+
+.dataTables_length, .dataTables_filter {
+  display: none;
+}
+
+#example_paginate {
+  float: right;
+}

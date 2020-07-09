@@ -10,5 +10,6 @@ module Ruby2020FindJob
     
     config.middleware.use I18n::JS::Middleware
     config.i18n.default_locale = :vi
+    config.active_job.queue_adapter = :sidekiq
   end
 end

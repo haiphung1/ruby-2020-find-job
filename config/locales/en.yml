@@ -57,6 +57,8 @@ en:
       approved_success: "Approved success!"
       approved_fail: "Approved fail!"
       manage: "Candidate management"
+      cancel_success: "Cancel job success"
+      cancel_fail: "Cancel job fail"
     view_cv: "View CV"
     confirm: "Confirm"
     company:
@@ -238,12 +240,18 @@ en:
   until_now: "Until now"
   authorized: "You are not authorized to access this page."
   enums:
-  userapply:
-    status:
-      pending: Pending
-      approved: Approved
+    userapply:
+      status:
+        pending: Pending
+        approved: Approved
+        cancel: "Cancel"
   post:
     target_type: 
       freelance: Freelance
       parttime: Parttime
       fulltime: Fulltime
+  email:
+    hi: "Hello"
+    subject: "Candidate announcement"
+    approved_job: "Your CV has been approved"
+    cancel_job: "Your CV is not accepted"
